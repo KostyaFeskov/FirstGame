@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d08191372214ecca07c7de43542007f, type: 3}
   m_Name: ClickButtonConfig
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  DefaultSprite: {fileID: 649223268058989734, guid: 370c3cf34e1a33e438e667da2f45f997, type: 3}
   ButtonCollors:
-    m_NormalColor: {r: 0.8490566, g: 0.09878945, b: 0.09878945, a: 0.8745098}
-    m_HighlightedColor: {r: 0.10871142, g: 0.8679245, b: 0.06823288, a: 0.7607843}
-    m_PressedColor: {r: 0.8490566, g: 0.6650665, b: 0.12548943, a: 0.8392157}
-    m_SelectedColor: {r: 0.91823894, g: 0.112614095, b: 0.86869216, a: 0.99215686}
-    m_DisabledColor: {r: 0.102448374, g: 0.15339392, b: 0.9308176, a: 1}
+    m_NormalColor: {r: 0.3160377, g: 0.38632628, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8470589, g: 0.098039225, b: 0.098039225, a: 1}
+    m_PressedColor: {r: 0.9058824, g: 0.6666667, b: 0.48235297, a: 1}
+    m_SelectedColor: {r: 0.31764707, g: 0.38823533, b: 1, a: 1}
+    m_DisabledColor: {r: 0.102448374, g: 0.15339392, b: 0.9308176, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
