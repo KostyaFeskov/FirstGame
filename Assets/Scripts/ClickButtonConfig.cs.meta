@@ -1,3 +1,12 @@
 fileFormatVersion: 2
 guid: 5d08191372214ecca07c7de43542007f
-timeCreated: 1740827824
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - DefaultSprite: {fileID: 649223268058989734, guid: 370c3cf34e1a33e438e667da2f45f997, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
