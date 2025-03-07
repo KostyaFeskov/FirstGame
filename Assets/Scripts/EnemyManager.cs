@@ -12,6 +12,8 @@ namespace DefaultNamespace
         private Enemy _currentEnemy;
         private HealtBar _healtBar;
 
+        public event UnityAction OnLevelPassed;
+
         public void Initialize(HealtBar healtBar)
         {
             _healtBar = healtBar;
@@ -21,18 +23,23 @@ namespace DefaultNamespace
         public void SpawnEnemy()
         {
             _currentEnemyData = _enemiesConfig.Enemies[0];
-            _currentEnemy = Instantiate(_enemiesConfig.EnemyPrefab, _enemiesContainer);
+            InitHpBar();
+            if (_currentEnemy == null)
+            {
+                _currentEnemy = Instantiate(_enemiesConfig.EnemyPrefab, _enemiesContainer);    
+                _currentEnemy.OnDead += () => OnLevelPassed?.Invoke();
+                _currentEnemy.OnDamaged += _healtBar.DecreaseValue;
+                _currentEnemy.OnDead += _healtBar.Hide;
+            }
             _currentEnemy.Initialize(_currentEnemyData);
 
-            InitHpBar();
         }
 
         private void InitHpBar()
         {
             _healtBar.ShowHpBar();
             _healtBar.SetMaxValue(_currentEnemyData.Health);
-            _currentEnemy.OnDamaged += _healtBar.DecreaseValue;
-            _currentEnemy.OnDead += _healtBar.Hide;
+
         }
 
         public void DamageCurrentEnemy(float damage)
