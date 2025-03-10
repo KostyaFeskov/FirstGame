@@ -12,6 +12,8 @@ namespace DefaultNamespace
         [SerializeField] private Button _loseRestartButton;
         [SerializeField] private Button _winRestartButton;
         
+        [SerializeField] private Score _score;
+        
         public event UnityAction OnRestartClicked;
 
         public void Initialize()
@@ -25,6 +27,7 @@ namespace DefaultNamespace
             gameObject.SetActive(true);
             _looseLevelWindow.SetActive(true);
             _winLevelWindow.SetActive(false);
+            _score.looseUpdate();
         }
 
         public void ShowWinLevelWindow()
@@ -32,6 +35,7 @@ namespace DefaultNamespace
             gameObject.SetActive(true);
             _looseLevelWindow.SetActive(false);
             _winLevelWindow.SetActive(true);
+            _score.winUpdate();
         }
         
         private void Restart()
