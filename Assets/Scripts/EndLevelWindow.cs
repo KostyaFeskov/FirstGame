@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -8,9 +10,9 @@ namespace DefaultNamespace
     {
         [SerializeField] private GameObject _looseLevelWindow;
         [SerializeField] private GameObject _winLevelWindow;
-        
-        [SerializeField] private Button _loseRestartButton;
-        [SerializeField] private Button _winRestartButton;
+        [SerializeField] private TextMeshProUGUI _endLevelText;
+        [SerializeField] private Button _restartButton;
+
         
         [SerializeField] private Score _score;
         
@@ -18,8 +20,7 @@ namespace DefaultNamespace
 
         public void Initialize()
         {
-            _loseRestartButton.onClick.AddListener(Restart);
-            _winRestartButton.onClick.AddListener(Restart);
+            _restartButton.onClick.AddListener(Restart);
         }
 
         public void ShowLooseLevelWindow()
@@ -27,6 +28,7 @@ namespace DefaultNamespace
             gameObject.SetActive(true);
             _looseLevelWindow.SetActive(true);
             _winLevelWindow.SetActive(false);
+            _endLevelText.text = "Restart";
             _score.looseUpdate();
         }
 
@@ -35,6 +37,7 @@ namespace DefaultNamespace
             gameObject.SetActive(true);
             _looseLevelWindow.SetActive(false);
             _winLevelWindow.SetActive(true);
+            _endLevelText.text = "New game";
             _score.winUpdate();
         }
         
