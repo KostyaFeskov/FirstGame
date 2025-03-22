@@ -1,9 +1,8 @@
-using DefaultNamespace;
-using DefaultNamespace.SceneManagment;
+using SceneManagment;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager : SceneManagment.EntryPoint {
+public class GameManager : EntryPoint {
     [SerializeField] private ClickButtonManager _clickButtonManager;
     [SerializeField] private EnemyManager _enemyManager;
     [SerializeField] private HealtBar _healtBar;

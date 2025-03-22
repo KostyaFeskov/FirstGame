@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace DefaultNamespace.SceneManagment
+namespace SceneManagment
 {
 
         public class SceneLoader : MonoBehaviour

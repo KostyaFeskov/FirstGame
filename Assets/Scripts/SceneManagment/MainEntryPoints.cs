@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace DefaultNamespace.SceneManagment
+namespace SceneManagment
 {
     public class MainEntryPoints : MonoBehaviour
     {
@@ -11,7 +10,7 @@ namespace DefaultNamespace.SceneManagment
             if (GameObject.FindGameObjectWithTag(SCENE_LOADER_TAG)) return;
             
             var sceneLoaderPrefab = Resources.Load<SceneLoader>(SCENE_LOADER_TAG);
-            var sceneLoader = GameObject.Instantiate(sceneLoaderPrefab);
+            var sceneLoader = Instantiate(sceneLoaderPrefab);
             DontDestroyOnLoad(sceneLoader);
 
             sceneLoader.LoadMetaScene();

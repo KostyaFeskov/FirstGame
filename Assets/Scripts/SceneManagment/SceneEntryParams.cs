@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.SceneManagment
+﻿namespace SceneManagment
 {
     public class SceneEntryParams
     {
