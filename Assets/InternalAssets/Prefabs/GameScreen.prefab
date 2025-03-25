@@ -450,7 +450,8 @@ MonoBehaviour:
   _enemyManager: {fileID: 2112113330056957989}
   _healtBar: {fileID: 2026621777751623992}
   _timer: {fileID: 0}
-  _endLevelWindow: {fileID: 0}
+  _endLevelWindow: {fileID: 213515742019390407, guid: 36337fc92c2e4334fbe1ee8258689143, type: 3}
+  levelsConfig: {fileID: 11400000, guid: 0f00db5db1c830d4d98cb679dc7d89a6, type: 2}
 --- !u!223 &254346574082478537
 Canvas:
   m_ObjectHideFlags: 0

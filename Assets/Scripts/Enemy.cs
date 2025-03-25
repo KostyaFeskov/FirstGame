@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using Configs.EnemyConfig;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -13,10 +14,10 @@ public class Enemy : MonoBehaviour
     private float _health;
     private Sequence _currentSequenceDamage;
 
-    public void Initialize(EnemyData enemyData)
+    public void Initialize(Sprite sprite, float health)
     {
-        _health = enemyData.Health;
-        _image.sprite = enemyData.Sprite;
+        _health = health;
+        _image.sprite = sprite;
         DamageEnemyAnimation();
     }
 
@@ -46,4 +47,6 @@ public class Enemy : MonoBehaviour
     {
         return _health;
     }
+
+
 }

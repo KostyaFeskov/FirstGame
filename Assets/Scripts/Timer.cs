@@ -23,6 +23,10 @@ public class Timer : MonoBehaviour
         _isPlaying = false;
     }
 
+    public void SetActive(bool isActive) {
+        gameObject.SetActive(isActive);
+    }
+
     public void Play()
     {
         _isPlaying = true;

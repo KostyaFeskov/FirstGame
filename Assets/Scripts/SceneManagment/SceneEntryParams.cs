@@ -1,6 +1,6 @@
 ﻿namespace SceneManagment
 {
-    public class SceneEntryParams
+    public abstract class SceneEntryParams
     {
         public string SceneName{ get; }
 
