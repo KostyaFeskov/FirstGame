@@ -34,6 +34,8 @@ namespace Meta.Locations
                 _previousButton.gameObject.SetActive(false);
             }
         }
+        
+        
 
         private void ShowNextLocation() {
             _locations[_currentLocation - 1].SetActive(false);
